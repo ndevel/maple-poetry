@@ -2,7 +2,7 @@ FROM node:lts-alpine AS web-builder
 
 WORKDIR /src
 
-COPY web/yarn.lock  web/*.json  web/*.js /src
+COPY web/yarn.lock  web/*.json  web/*.js /src/
 RUN yarn global add @quasar/cli && yarn
 
 COPY web/index.html /src/index.html
